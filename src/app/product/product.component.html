@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+</head>
+<body>
+    <h2>Product List</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Product ID</th> 
+                <th>Name</th>
+                <th>Price</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of product">
+                <td>{{p.productid}}</td>
+                <td>{{p.productname}}</td>
+                <td>{{p.productprice}}</td> 
+                <td><button (click)="updateProducts(p.productid)">Update</button></td>
+                <td><button (click)="deleteProduct(p.productid)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
